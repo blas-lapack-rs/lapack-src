@@ -1,9 +1,6 @@
-//! [LAPACK] implementation of choice.
+//! [LAPACK] implementation of choice
 //!
-//! Note that this package does not contain any functionality other than
-//! compiling (if necessary) and linking to the chosen implementation. Bindings
-//! are available in [`lapack-sys`][crate-lapack-sys], and wrappers are
-//! available in [`lapack`][crate-lapack].
+//! The usage of the package is explained [here][usage].
 //!
 //! ## Configuration
 //!
@@ -22,13 +19,11 @@
 //! lapack-src = { version = "0.1", features = ["openblas"] }
 //! ```
 //!
-//! [lapack]: https://en.wikipedia.org/wiki/LAPACK
-//! [crate-lapack-sys]: https://crates.io/crates/lapack-sys
-//! [crate-lapack]: https://crates.io/crates/lapack
-//!
 //! [accelerate]: https://developer.apple.com/reference/accelerate
+//! [lapack]: https://en.wikipedia.org/wiki/LAPACK
 //! [netlib]: http://www.netlib.org/
 //! [openblas]: http://www.openblas.net/
+//! [usage]: https://blas-lapack-rs.github.io/usage
 
 #![no_std]
 

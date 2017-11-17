@@ -1,12 +1,12 @@
 [package]
 name = "lapack-src"
-version = "0.1.0"
+version = "0.1.1"
 license = "Apache-2.0/MIT"
 authors = ["Ivan Ukhov <ivan.ukhov@gmail.com>"]
 description = "The package provides a LAPACK implementation of choice."
 documentation = "https://docs.rs/lapack-src"
-homepage = "https://github.com/stainless-steel/lapack-src"
-repository = "https://github.com/stainless-steel/lapack-src"
+homepage = "https://github.com/blas-lapack-rs/lapack-src"
+repository = "https://github.com/blas-lapack-rs/lapack-src"
 readme = "README.md"
 categories = ["science"]
 keywords = ["linear-algebra"]

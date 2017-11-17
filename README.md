@@ -1,11 +1,7 @@
 # lapack-src [![Package][package-img]][package-url] [![Documentation][documentation-img]][documentation-url] [![Build][build-img]][build-url]
 
-The packages provides a [LAPACK] implementation of choice.
-
-Note that this package does not contain any functionality other than compiling
-(if necessary) and linking to the chosen implementation. Bindings are available
-in [`lapack-sys`][crate-lapack-sys], and wrappers are available in
-[`lapack`][crate-lapack].
+The packages provides a [LAPACK] implementation of choice. The usage of the
+package is explained [here][usage].
 
 ## Configuration
 
@@ -30,16 +26,14 @@ Your contribution is highly appreciated. Do not hesitate to open an issue or a
 pull request. Note that any contribution submitted for inclusion in the project
 will be licensed according to the terms given in [LICENSE.md](LICENSE.md).
 
-[lapack]: https://en.wikipedia.org/wiki/LAPACK
-[crate-lapack-sys]: https://crates.io/crates/lapack-sys
-[crate-lapack]: https://crates.io/crates/lapack
-
 [accelerate]: https://developer.apple.com/reference/accelerate
+[lapack]: https://en.wikipedia.org/wiki/LAPACK
 [netlib]: http://www.netlib.org/
 [openblas]: http://www.openblas.net/
+[usage]: https://blas-lapack-rs.github.io/usage
 
-[build-img]: https://travis-ci.org/stainless-steel/lapack-src.svg?branch=master
-[build-url]: https://travis-ci.org/stainless-steel/lapack-src
+[build-img]: https://travis-ci.org/blas-lapack-rs/lapack-src.svg?branch=master
+[build-url]: https://travis-ci.org/blas-lapack-rs/lapack-src
 [documentation-img]: https://docs.rs/lapack-src/badge.svg
 [documentation-url]: https://docs.rs/lapack-src
 [package-img]: https://img.shields.io/crates/v/lapack-src.svg
