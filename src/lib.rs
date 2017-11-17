@@ -1,4 +1,4 @@
-//! [LAPACK] implementation of choice
+//! [LAPACK] implementation of choice.
 //!
 //! The usage of the package is explained [here][usage].
 //!
