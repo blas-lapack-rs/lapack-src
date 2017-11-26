@@ -1,6 +1,6 @@
 # lapack-src [![Package][package-img]][package-url] [![Documentation][documentation-img]][documentation-url] [![Build][build-img]][build-url]
 
-The packages provides a [LAPACK] implementation of choice.
+The packages provides a [LAPACK] source of choice.
 
 The usage of the package is explained [here][usage].
 
