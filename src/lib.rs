@@ -35,3 +35,6 @@ extern crate netlib_src as raw;
 
 #[cfg(feature = "openblas")]
 extern crate openblas_src as raw;
+
+#[cfg(feature = "intel-mkl")]
+extern crate intel_mkl_src as raw;
