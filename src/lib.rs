@@ -9,6 +9,7 @@
 //! * `accelerate`, which is the one in the [Accelerate] framework (macOS only),
 //! * `netlib`, which is the reference one by [Netlib], and
 //! * `openblas`, which is the one in [OpenBLAS].
+//! * `intel-mkl`, which is the one in [Intel MKL].
 //!
 //! An implementation can be chosen as follows:
 //!
@@ -17,12 +18,14 @@
 //! lapack-src = { version = "0.1", features = ["accelerate"] }
 //! lapack-src = { version = "0.1", features = ["netlib"] }
 //! lapack-src = { version = "0.1", features = ["openblas"] }
+//! lapack-src = { version = "0.1", features = ["intel-mkl"] }
 //! ```
 //!
 //! [accelerate]: https://developer.apple.com/reference/accelerate
 //! [lapack]: https://en.wikipedia.org/wiki/LAPACK
 //! [netlib]: http://www.netlib.org/
 //! [openblas]: http://www.openblas.net/
+//! [intel mkl]: https://software.intel.com/en-us/mkl
 //! [usage]: https://blas-lapack-rs.github.io/usage
 
 #![no_std]
