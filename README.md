@@ -9,18 +9,18 @@ The usage of the package is explained [here][usage].
 The following implementations are available:
 
 * `accelerate`, which is the one in the [Accelerate] framework (macOS only),
+* `intel-mkl`, which is the one in [Intel MKL],
 * `netlib`, which is the reference one by [Netlib], and
 * `openblas`, which is the one in [OpenBLAS].
-* `intel-mkl`, which is the one in [Intel MKL].
 
 An implementation can be chosen as follows:
 
 ```toml
 [dependencies]
 lapack-src = { version = "0.1", features = ["accelerate"] }
+lapack-src = { version = "0.1", features = ["intel-mkl"] }
 lapack-src = { version = "0.1", features = ["netlib"] }
 lapack-src = { version = "0.1", features = ["openblas"] }
-lapack-src = { version = "0.1", features = ["intel-mkl"] }
 ```
 
 ## Contribution
@@ -30,10 +30,10 @@ pull request. Note that any contribution submitted for inclusion in the project
 will be licensed according to the terms given in [LICENSE.md](LICENSE.md).
 
 [accelerate]: https://developer.apple.com/reference/accelerate
+[intel mkl]: https://software.intel.com/en-us/mkl
 [lapack]: https://en.wikipedia.org/wiki/LAPACK
 [netlib]: http://www.netlib.org/
 [openblas]: http://www.openblas.net/
-[intel mkl]: https://software.intel.com/en-us/mkl
 [usage]: https://blas-lapack-rs.github.io/usage
 
 [build-img]: https://travis-ci.org/blas-lapack-rs/lapack-src.svg?branch=master
