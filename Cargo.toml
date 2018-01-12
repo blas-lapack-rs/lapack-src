@@ -2,7 +2,10 @@
 name = "lapack-src"
 version = "0.1.3"
 license = "Apache-2.0/MIT"
-authors = ["Ivan Ukhov <ivan.ukhov@gmail.com>"]
+authors = [
+    "Ivan Ukhov <ivan.ukhov@gmail.com>",
+    "Toshiki Teramura <toshiki.teramura@gmail.com>",
+]
 description = "The package provides a LAPACK source of choice."
 documentation = "https://docs.rs/lapack-src"
 homepage = "https://github.com/blas-lapack-rs/lapack-src"
