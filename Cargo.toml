@@ -1,6 +1,6 @@
 [package]
 name = "lapack-src"
-version = "0.1.2"
+version = "0.1.3"
 license = "Apache-2.0/MIT"
 authors = ["Ivan Ukhov <ivan.ukhov@gmail.com>"]
 description = "The package provides a LAPACK source of choice."
@@ -13,11 +13,16 @@ keywords = ["linear-algebra"]
 
 [features]
 accelerate = ["accelerate-src"]
+intel-mkl = ["intel-mkl-src"]
 netlib = ["netlib-src"]
 openblas = ["openblas-src"]
 
 [dependencies.accelerate-src]
 version = "0.3"
+optional = true
+
+[dependencies.intel-mkl-src]
+version = "0.2"
 optional = true
 
 [dependencies.netlib-src]
