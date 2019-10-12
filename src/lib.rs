@@ -15,10 +15,10 @@
 //!
 //! ```toml
 //! [dependencies]
-//! lapack-src = { version = "0.3", features = ["accelerate"] }
-//! lapack-src = { version = "0.3", features = ["intel-mkl"] }
-//! lapack-src = { version = "0.3", features = ["netlib"] }
-//! lapack-src = { version = "0.3", features = ["openblas"] }
+//! lapack-src = { version = "0.4", features = ["accelerate"] }
+//! lapack-src = { version = "0.4", features = ["intel-mkl"] }
+//! lapack-src = { version = "0.4", features = ["netlib"] }
+//! lapack-src = { version = "0.4", features = ["openblas"] }
 //! ```
 //!
 //! [accelerate]: https://developer.apple.com/reference/accelerate
