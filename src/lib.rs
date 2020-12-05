@@ -1,6 +1,6 @@
 //! [LAPACK] source of choice.
 //!
-//! The usage of the package is explained [here][usage].
+//! ## [Architecture]
 //!
 //! ## Configuration
 //!
@@ -21,12 +21,13 @@
 //! lapack-src = { version = "0.6", features = ["openblas"] }
 //! ```
 //!
+//! [architecture]: https://blas-lapack-rs.github.io/architecture
+//! [lapack]: https://en.wikipedia.org/wiki/LAPACK
+//!
 //! [accelerate]: https://developer.apple.com/reference/accelerate
 //! [intel mkl]: https://software.intel.com/en-us/mkl
-//! [lapack]: https://en.wikipedia.org/wiki/LAPACK
 //! [netlib]: http://www.netlib.org/
 //! [openblas]: http://www.openblas.net/
-//! [usage]: https://blas-lapack-rs.github.io/usage
 
 #![no_std]
 
