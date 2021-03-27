@@ -15,10 +15,10 @@
 //!
 //! ```toml
 //! [dependencies]
-//! lapack-src = { version = "0.6", features = ["accelerate"] }
-//! lapack-src = { version = "0.6", features = ["intel-mkl"] }
-//! lapack-src = { version = "0.6", features = ["netlib"] }
-//! lapack-src = { version = "0.6", features = ["openblas"] }
+//! lapack-src = { version = "0.8", features = ["accelerate"] }
+//! lapack-src = { version = "0.8", features = ["intel-mkl"] }
+//! lapack-src = { version = "0.8", features = ["netlib"] }
+//! lapack-src = { version = "0.8", features = ["openblas"] }
 //! ```
 //!
 //! [architecture]: https://blas-lapack-rs.github.io/architecture
