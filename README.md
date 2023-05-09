@@ -21,6 +21,7 @@ lapack-src = { version = "0.8", features = ["accelerate"] }
 lapack-src = { version = "0.8", features = ["intel-mkl"] }
 lapack-src = { version = "0.8", features = ["netlib"] }
 lapack-src = { version = "0.8", features = ["openblas"] }
+r-src = { version = "0.8", features = ["r"] }
 ```
 
 ## Contribution
@@ -36,6 +37,7 @@ will be licensed according to the terms given in [LICENSE.md](LICENSE.md).
 [intel mkl]: https://software.intel.com/en-us/mkl
 [netlib]: http://www.netlib.org/
 [openblas]: http://www.openblas.net/
+[R]: https://cran.r-project.org
 
 [build-img]: https://travis-ci.org/blas-lapack-rs/lapack-src.svg?branch=master
 [build-url]: https://travis-ci.org/blas-lapack-rs/lapack-src
