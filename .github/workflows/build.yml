@@ -1,0 +1,52 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  macos:
+    name: macOS
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        feature:
+          - accelerate
+          - intel-mkl
+          - netlib
+          - openblas
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run the test suite
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: >
+            --features=${{ matrix.feature }}
+        env:
+          CC: gcc-13
+          FC: gfortran-13
+          LIBRARY_PATH: /usr/local/opt/gcc@13/lib/gcc/13
+
+  ubuntu:
+    name: Ubuntu
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        feature:
+          - intel-mkl
+          - netlib
+          - openblas
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run the test suite
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: >
+            --features=${{ matrix.feature }}

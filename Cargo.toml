@@ -1,6 +1,6 @@
 [package]
 name = "lapack-src"
-version = "0.8.0"
+version = "0.9.0"
 license = "Apache-2.0/MIT"
 authors = [
     "Ivan Ukhov <ivan.ukhov@gmail.com>",
@@ -21,6 +21,7 @@ accelerate = ["accelerate-src"]
 intel-mkl = ["intel-mkl-src"]
 netlib = ["netlib-src"]
 openblas = ["openblas-src"]
+r = ["r-src"]
 
 [dependencies.accelerate-src]
 version = "0.3"
@@ -36,4 +37,8 @@ optional = true
 
 [dependencies.openblas-src]
 version = "0.10"
+optional = true
+
+[dependencies.r-src]
+version = "0.1"
 optional = true
