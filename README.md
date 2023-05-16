@@ -37,8 +37,8 @@ will be licensed according to the terms given in [LICENSE.md](LICENSE.md).
 
 [accelerate]: https://developer.apple.com/reference/accelerate
 [intel mkl]: https://software.intel.com/en-us/mkl
-[netlib]: http://www.netlib.org/
-[openblas]: http://www.openblas.net/
+[netlib]: https://www.netlib.org/
+[openblas]: https://www.openblas.net/
 [R]: https://cran.r-project.org
 
 [build-img]: https://github.com/blas-lapack-rs/lapack-src/actions/workflows/build.yml/badge.svg
