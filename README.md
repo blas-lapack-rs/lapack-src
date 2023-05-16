@@ -41,8 +41,8 @@ will be licensed according to the terms given in [LICENSE.md](LICENSE.md).
 [openblas]: http://www.openblas.net/
 [R]: https://cran.r-project.org
 
-[build-img]: https://travis-ci.org/blas-lapack-rs/lapack-src.svg?branch=master
-[build-url]: https://travis-ci.org/blas-lapack-rs/lapack-src
+[build-img]: https://github.com/blas-lapack-rs/lapack-src/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/blas-lapack-rs/lapack-src/actions/workflows/build.yml/
 [documentation-img]: https://docs.rs/lapack-src/badge.svg
 [documentation-url]: https://docs.rs/lapack-src
 [package-img]: https://img.shields.io/crates/v/lapack-src.svg
