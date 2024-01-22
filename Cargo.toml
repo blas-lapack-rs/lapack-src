@@ -1,10 +1,11 @@
 [package]
 name = "lapack-src"
-version = "0.9.0"
+version = "0.10.0"
 license = "Apache-2.0/MIT"
 authors = [
     "Balasubramanian Narasimhan <b.naras@gmail.com>",
     "Ivan Ukhov <ivan.ukhov@gmail.com>",
+    "Michael Zietz <michael.zietz@gmail.com>",
     "Mitsutoshi Aoe <me@maoe.name>",
     "Stefan Kroboth <stefan.kroboth@gmail.com>",
     "Toshiki Teramura <toshiki.teramura@gmail.com>",
