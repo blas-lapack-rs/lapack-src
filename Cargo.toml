@@ -1,6 +1,6 @@
 [package]
 name = "lapack-src"
-version = "0.10.0"
+version = "0.11.0"
 license = "Apache-2.0/MIT"
 authors = [
     "Balasubramanian Narasimhan <b.naras@gmail.com>",
@@ -42,5 +42,5 @@ version = "0.10"
 optional = true
 
 [dependencies.r-src]
-version = "0.1"
+version = "0.2.1"
 optional = true
