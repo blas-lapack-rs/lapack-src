@@ -22,6 +22,7 @@ jobs:
         with:
           toolchain: nightly
           components: clippy rustfmt
+      - run: rustup toolchain install nightly-2025-02-06
       - run: cargo clippy -- -D warnings
       - run: cargo fmt --all -- --check
 
