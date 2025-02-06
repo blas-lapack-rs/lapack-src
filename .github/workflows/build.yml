@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions-rs/toolchain@v1.0.6
         with:
-          toolchain: stable
+          toolchain: nightly
           components: clippy rustfmt
       - run: cargo clippy -- -D warnings
       - run: cargo fmt --all -- --check
