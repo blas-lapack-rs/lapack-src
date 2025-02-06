@@ -18,7 +18,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions-rs/toolchain@v1
+      - uses: actions-rs/toolchain@v1.0.6
         with:
           toolchain: stable
           components: clippy rustfmt
@@ -44,7 +44,7 @@ jobs:
           echo "FC=$(brew --prefix gcc@13)/bin/gfortran-13" >> $GITHUB_ENV
           echo "LIBRARY_PATH=$(brew --prefix gcc@13)/lib/gcc/13" >> $GITHUB_ENV
 
-      - uses: actions-rs/toolchain@v1
+      - uses: actions-rs/toolchain@v1.0.6
         with:
           toolchain: stable
 
@@ -61,7 +61,7 @@ jobs:
           - openblas
     steps:
       - uses: actions/checkout@v4
-      - uses: actions-rs/toolchain@v1
+      - uses: actions-rs/toolchain@v1.0.6
         with:
           toolchain: stable
       - run: cargo test --features=${{ matrix.feature }}
