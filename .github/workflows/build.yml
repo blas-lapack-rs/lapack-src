@@ -19,9 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions-rs/toolchain@v1.0.6
-        with:
-          toolchain: nightly
-          components: clippy rustfmt
       - run: rustup toolchain install nightly-2025-02-06
       - run: cargo clippy -- -D warnings
       - run: cargo fmt --all -- --check
