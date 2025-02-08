@@ -19,11 +19,11 @@ An implementation can be chosen as follows:
 
 ```toml
 [dependencies]
-lapack-src = { version = "0.9", features = ["accelerate"] }
-lapack-src = { version = "0.9", features = ["intel-mkl"] }
-lapack-src = { version = "0.9", features = ["netlib"] }
-lapack-src = { version = "0.9", features = ["openblas"] }
-lapack-src = { version = "0.9", features = ["r"] }
+lapack-src = { version = "0.11", features = ["accelerate"] }
+lapack-src = { version = "0.11", features = ["intel-mkl"] }
+lapack-src = { version = "0.11", features = ["netlib"] }
+lapack-src = { version = "0.11", features = ["openblas"] }
+lapack-src = { version = "0.11", features = ["r"] }
 ```
 
 ## Contribution
