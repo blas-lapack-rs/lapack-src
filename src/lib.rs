@@ -37,7 +37,17 @@
 #[cfg(feature = "accelerate")]
 extern crate accelerate_src as raw;
 
-#[cfg(feature = "intel-mkl")]
+#[cfg(any(
+    feature = "intel-mkl",
+    feature = "intel-mkl-static-lp64-iomp",
+    feature = "intel-mkl-static-lp64-seq",
+    feature = "intel-mkl-static-ilp64-iomp",
+    feature = "intel-mkl-static-ilp64-seq",
+    feature = "intel-mkl-dynamic-lp64-iomp",
+    feature = "intel-mkl-dynamic-lp64-seq",
+    feature = "intel-mkl-dynamic-ilp64-iomp",
+    feature = "intel-mkl-dynamic-ilp64-seq"
+))]
 extern crate intel_mkl_src as raw;
 
 #[cfg(feature = "netlib")]
