@@ -1,6 +1,6 @@
 [package]
 name = "lapack-src"
-version = "0.11.0"
+version = "0.12.0"
 edition = "2021"
 license = "Apache-2.0 OR MIT"
 authors = [
@@ -23,10 +23,23 @@ keywords = ["linear-algebra"]
 changelog = "CHANGELOG.md"
 
 [features]
+# apple accelerate
 accelerate = ["accelerate-src"]
-intel-mkl = ["intel-mkl-src"]
+# intel mkl with different configurations
+intel-mkl = ["intel-mkl-static-lp64-seq"]
+intel-mkl-static-lp64-iomp   = ["intel-mkl-src/mkl-static-lp64-iomp"]
+intel-mkl-static-lp64-seq    = ["intel-mkl-src/mkl-static-lp64-seq"]
+intel-mkl-static-ilp64-iomp  = ["intel-mkl-src/mkl-static-ilp64-iomp"]
+intel-mkl-static-ilp64-seq   = ["intel-mkl-src/mkl-static-ilp64-seq"]
+intel-mkl-dynamic-lp64-iomp  = ["intel-mkl-src/mkl-dynamic-lp64-iomp"]
+intel-mkl-dynamic-lp64-seq   = ["intel-mkl-src/mkl-dynamic-lp64-seq"]
+intel-mkl-dynamic-ilp64-iomp = ["intel-mkl-src/mkl-dynamic-ilp64-iomp"]
+intel-mkl-dynamic-ilp64-seq  = ["intel-mkl-src/mkl-dynamic-ilp64-seq"]
+# netlib
 netlib = ["netlib-src"]
+# openblas
 openblas = ["openblas-src"]
+# R
 r = ["r-src"]
 
 [dependencies.accelerate-src]
@@ -36,6 +49,8 @@ optional = true
 [dependencies.intel-mkl-src]
 version = "0.8"
 optional = true
+default-features = false
+
 
 [dependencies.netlib-src]
 version = "0.8"

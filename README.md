@@ -26,6 +26,13 @@ lapack-src = { version = "0.11", features = ["openblas"] }
 lapack-src = { version = "0.11", features = ["r"] }
 ```
 
+### Intel MKL Configuration
+
+The `intel-mkl` feature will *statically* link the *sequential LP64* version of
+the MKL library. To link other versions of the library, check the `intel-mkl-*-*-*`
+features inside this crate, which are analogous to the feature flags of
+the [`intel-mkl-src` crate] (https://crates.io/crates/intel-mkl-src).
+
 ## Contribution
 
 Your contribution is highly appreciated. Do not hesitate to open an issue or a
