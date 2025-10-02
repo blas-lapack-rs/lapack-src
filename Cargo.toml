@@ -23,18 +23,11 @@ keywords = ["linear-algebra"]
 changelog = "CHANGELOG.md"
 
 [features]
-# apple accelerate
 accelerate = ["accelerate-src"]
-# parallel LP64 version of MKL
 intel-mkl = ["intel-mkl-src/mkl-static-lp64-iomp"]
-# sequential LP64 version of MKL
 intel-mkl-seq = ["intel-mkl-src/mkl-static-lp64-seq"]
-
-# netlib
 netlib = ["netlib-src"]
-# openblas
 openblas = ["openblas-src"]
-# R
 r = ["r-src"]
 
 [dependencies.accelerate-src]
@@ -44,8 +37,6 @@ optional = true
 [dependencies.intel-mkl-src]
 version = "0.8"
 optional = true
-default-features = false
-
 
 [dependencies.netlib-src]
 version = "0.9"
