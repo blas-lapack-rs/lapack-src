@@ -46,7 +46,7 @@
 #[cfg(feature = "accelerate")]
 extern crate accelerate_src as raw;
 
-#[cfg(any(feature = "intel-mkl", feature = "intel-mkl-seq",))]
+#[cfg(any(feature = "intel-mkl", feature = "intel-mkl-seq"))]
 extern crate intel_mkl_src as raw;
 
 #[cfg(feature = "netlib")]
