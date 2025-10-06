@@ -7,7 +7,11 @@
 //! The following implementations are available:
 //!
 //! * `accelerate`, which is the one in the [Accelerate] framework (macOS only),
-//! * `intel-mkl`, which is the one in [Intel MKL],
+//! * `intel-mkl-*`, which is the one in [Intel MKL], where
+//!   * `intel-mkl-dynamic-parallel` dynamically links the parallel backend of MKL
+//!   * `intel-mkl-dynamic-sequential` dynamically links the sequential backend of MKL
+//!   * `intel-mkl-static-parallel` statically links the parallel backend of MKL
+//!   * `intel-mkl-static-sequential` statically links the sequential backend of MKL
 //! * `netlib`, which is the reference one by [Netlib],
 //! * `openblas`, which is the one in [OpenBLAS], and
 //! * `r`, which is the one in [R].
@@ -22,15 +26,6 @@
 //! lapack-src = { version = "0.12", features = ["openblas"] }
 //! lapack-src = { version = "0.12", features = ["r"] }
 //! ```
-//! ### Configuring MKL
-//!
-//! When the `intel-mkl` feature is selected, then the parallel version of
-//! MKL using OpenMP is _statically_ linked. To link the sequential version
-//! use the `intel-mkl-seq` feature. In both cases, the
-//! [LP64 interface](https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2023-0/using-the-ilp64-interface-vs-lp64-interface.html)
-//! is linked. If other linkage options for MKL are desired, omit `lapack-src`
-//! as a dependency and use the [`intel-mkl-src`](https://crates.io/crates/intel-mkl-src)
-//! crate directly with the appropriate feature flags.
 //!
 //! [architecture]: https://blas-lapack-rs.github.io/architecture
 //! [lapack]: https://en.wikipedia.org/wiki/LAPACK
@@ -46,7 +41,12 @@
 #[cfg(feature = "accelerate")]
 extern crate accelerate_src as raw;
 
-#[cfg(any(feature = "intel-mkl", feature = "intel-mkl-seq"))]
+#[cfg(any(
+    feature = "intel-mkl-dynamic-parallel",
+    feature = "intel-mkl-dynamic-sequential",
+    feature = "intel-mkl-static-parallel",
+    feature = "intel-mkl-static-sequential",
+))]
 extern crate intel_mkl_src as raw;
 
 #[cfg(feature = "netlib")]
