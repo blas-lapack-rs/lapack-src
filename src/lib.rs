@@ -7,7 +7,11 @@
 //! The following implementations are available:
 //!
 //! * `accelerate`, which is the one in the [Accelerate] framework (macOS only),
-//! * `intel-mkl`, which is the one in [Intel MKL],
+//! * `intel-mkl-*`, which is the one in [Intel MKL], where
+//!   * `intel-mkl-dynamic-parallel` dynamically links the parallel backend of MKL
+//!   * `intel-mkl-dynamic-sequential` dynamically links the sequential backend of MKL
+//!   * `intel-mkl-static-parallel` statically links the parallel backend of MKL
+//!   * `intel-mkl-static-sequential` statically links the sequential backend of MKL
 //! * `netlib`, which is the reference one by [Netlib],
 //! * `openblas`, which is the one in [OpenBLAS], and
 //! * `r`, which is the one in [R].
@@ -37,7 +41,12 @@
 #[cfg(feature = "accelerate")]
 extern crate accelerate_src as raw;
 
-#[cfg(feature = "intel-mkl")]
+#[cfg(any(
+    feature = "intel-mkl-dynamic-parallel",
+    feature = "intel-mkl-dynamic-sequential",
+    feature = "intel-mkl-static-parallel",
+    feature = "intel-mkl-static-sequential",
+))]
 extern crate intel_mkl_src as raw;
 
 #[cfg(feature = "netlib")]
