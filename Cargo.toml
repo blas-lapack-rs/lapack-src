@@ -10,6 +10,7 @@ authors = [
     "Mitsutoshi Aoe <me@maoe.name>",
     "Stefan Kroboth <stefan.kroboth@gmail.com>",
     "Toshiki Teramura <toshiki.teramura@gmail.com>",
+    "geo-ant",
 ]
 description = "The package provides a LAPACK source of choice."
 documentation = "https://docs.rs/lapack-src"
