@@ -7,11 +7,7 @@
 //! The following implementations are available:
 //!
 //! * `accelerate`, which is the one in the [Accelerate] framework (macOS only),
-//! * `intel-mkl-*`, which is the one in [Intel MKL], where
-//!   * `intel-mkl-dynamic-parallel` dynamically links the parallel backend of MKL
-//!   * `intel-mkl-dynamic-sequential` dynamically links the sequential backend of MKL
-//!   * `intel-mkl-static-parallel` statically links the parallel backend of MKL
-//!   * `intel-mkl-static-sequential` statically links the sequential backend of MKL
+//! * `intel-mkl`, which is the one in [Intel MKL],
 //! * `netlib`, which is the reference one by [Netlib],
 //! * `openblas`, which is the one in [OpenBLAS], and
 //! * `r`, which is the one in [R].
@@ -20,11 +16,14 @@
 //!
 //! ```toml
 //! [dependencies]
-//! lapack-src = { version = "0.12", features = ["accelerate"] }
-//! lapack-src = { version = "0.12", features = ["intel-mkl"] }
-//! lapack-src = { version = "0.12", features = ["netlib"] }
-//! lapack-src = { version = "0.12", features = ["openblas"] }
-//! lapack-src = { version = "0.12", features = ["r"] }
+//! lapack-src = { version = "0.13", features = ["accelerate"] }
+//! lapack-src = { version = "0.13", features = ["intel-mkl-dynamic-parallel"] }
+//! lapack-src = { version = "0.13", features = ["intel-mkl-dynamic-sequential"] }
+//! lapack-src = { version = "0.13", features = ["intel-mkl-static-parallel"] }
+//! lapack-src = { version = "0.13", features = ["intel-mkl-static-sequential"] }
+//! lapack-src = { version = "0.13", features = ["netlib"] }
+//! lapack-src = { version = "0.13", features = ["openblas"] }
+//! lapack-src = { version = "0.13", features = ["r"] }
 //! ```
 //!
 //! [architecture]: https://blas-lapack-rs.github.io/architecture

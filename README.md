@@ -19,19 +19,15 @@ An implementation can be chosen as follows:
 
 ```toml
 [dependencies]
-lapack-src = { version = "0.12", features = ["accelerate"] }
-lapack-src = { version = "0.12", features = ["intel-mkl"] }
-lapack-src = { version = "0.12", features = ["netlib"] }
-lapack-src = { version = "0.12", features = ["openblas"] }
-lapack-src = { version = "0.12", features = ["r"] }
+lapack-src = { version = "0.13", features = ["accelerate"] }
+lapack-src = { version = "0.13", features = ["intel-mkl-dynamic-parallel"] }
+lapack-src = { version = "0.13", features = ["intel-mkl-dynamic-sequential"] }
+lapack-src = { version = "0.13", features = ["intel-mkl-static-parallel"] }
+lapack-src = { version = "0.13", features = ["intel-mkl-static-sequential"] }
+lapack-src = { version = "0.13", features = ["netlib"] }
+lapack-src = { version = "0.13", features = ["openblas"] }
+lapack-src = { version = "0.13", features = ["r"] }
 ```
-
-### Intel MKL Configuration
-
-The `intel-mkl` feature will *statically* link the *sequential LP64* version of
-the MKL library. To link other versions of the library, check the `intel-mkl-*-*-*`
-features inside this crate, which are analogous to the feature flags of
-the [`intel-mkl-src` crate] (https://crates.io/crates/intel-mkl-src).
 
 ## Contribution
 
